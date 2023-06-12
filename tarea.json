@@ -1,0 +1,94 @@
+{
+    "entrenadores":[
+  {
+  "nombre":"Michael Johnson ", 
+  "apellidos":"Hernandez Perez", 
+  "cedula":1725859857,
+  "especialidad":"entrenamiento de fuerza",
+  "email":"Johnson123@gmail.com"},
+
+  {"nombre":"Sarah Carla ", 
+  "apellidos":"Suarez Cedeño", 
+  "cedula":6789809877,
+  "especialidad":"entrenamiento cardiovascular",
+  "email":"sarah123@gmail.com"},
+
+  {"nombre":"Franki Max ", 
+"apellidos":"Tuarez Pincay", 
+"cedula":1235859687,
+"especialidad":"entrenamiento Funcional",
+"email":"Franki23@gmail.com"},
+
+{"nombre":"Carlos Juan", 
+"apellidos":"Rodriguez Menendez<", 
+"cedula":1897659457,
+"especialidad":"BOXEO",
+"email":"Juan13@gmail.com"}],
+
+"clientes":[
+    {
+    "nombre":"John Doe",
+    "apellidos":"Arana Perez",
+    "cedula":2345469857,
+    "edad":30,
+    "fecha_nacimiento":"17-08-2000",
+    "genero":"masculino",
+    "telefono":"09006682",
+    "email":"JhonDoe@gmail.com",
+    "miembro_desde":"2022-01-15"},
+
+    {
+    "nombre":"Anthony Smith",
+    "apellidos":"Delgado Tapia",
+    "cedula":1325469456,
+    "edad":25,
+    "fecha_nacimiento":"16-08-2001",
+    "genero":"masculino",
+    "telefono":"0995665891",
+    "email":"Janthony@gmail.com",
+    "miembro_desde":"2021-09-10"},
+    
+    {
+    "nombre":"Juan Carlos",
+    "apellidos":"Perez Hernandez",
+    "cedula":1325469822,
+    "edad":18,
+    "fecha_nacimiento":"16-06-2001",
+    "genero":"masculino",
+    "telefono":"0978905891",
+    "email":"JuanPerez@gmail.com",
+    "miembro_desde":"2022-01-20"}],
+
+        
+    "clases":[
+        {
+        "nombre":"Boxeo",
+        "horario":"días miercoles y jueves a las 18:00",
+        "duracion":60,
+        "entrenador":"Carlos Juan"},
+        
+
+        {
+            "nombre":"Spinnig",
+            "horario":"días lunes y miércoles a las 19:30",
+            "duracion":45,
+            "entrenador":"Sarah Carla"},
+
+        {
+             "nombre":"Funcional Crossfit",
+             "horario":"días martes y jueves a las 18:00",
+             "duracion":60,
+             "entrenador":"Franki Max"}],
+
+    "horarios":[
+                {
+                "Lunes":"7:00 AM - 10:00 PM",
+                "Martes":"7:00 AM - 10:00 PM",
+                "Miercoles":"7:00 AM - 10:00 PM",
+                "Jueves":"7:00 AM - 10:00 PM",
+                "Viernes":"7:00 AM - 10:00 PM",
+                "Sabado":"8:00 AM - 6:00 PM",
+                "Domingo":"10:00 AM - 4:00 PM"}]
+        
+            }
+

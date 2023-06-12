@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <style>
+        body {
+            background-image: url(https://fondosmil.com/fondo/4083.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: rgb(196, 59, 59);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>COACH</h1>
+    <table border="1" id="entrenadores">
+      <thead>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Cédula</th>
+        <th>Especialidad</th>
+        <th>Email</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <h1>Clientes</h1>
+    <table border="1" id="clientes">
+      <thead>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Cédula</th>
+        <th>Edad</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Género</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+        <th>Miembro Desde</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+    <h1>Clases</h1>
+    <table border="1" id="clases">
+      <thead>
+        <th>Nombre</th>
+        <th>Horarios</th>
+        <th>Duración</th>
+        <th>Entrenador</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <h1>Horarios</h1>
+    <table border="1" id="horarios">
+    
+      <thead>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(() => {
+          $.ajax({
+            type: 'GET',
+            url: 'tarea.json',
+            dataType: 'json',
+            success: function(data) {
+                data.entrenadores.forEach(function(entrenador) {
+                let fila = $('<tr>');
+                fila.append($(`<td>${entrenador.nombre}</td>`));
+                fila.append($(`<td>${entrenador.apellidos}</td>`));
+                fila.append($(`<td>${entrenador.cedula}</td>`));
+                fila.append($(`<td>${entrenador.especialidad}</td>`));
+                fila.append($(`<td>${entrenador.email}</td>`));
+                $('#entrenadores tbody').append(fila);
+              });
+
+              data.clientes.forEach(function(cliente) {
+                let fila = $('<tr>');
+                fila.append($(`<td>${cliente.nombre}</td>`));
+                fila.append($(`<td>${cliente.apellidos}</td>`));
+                fila.append($(`<td>${cliente.cedula}</td>`));
+                fila.append($(`<td>${cliente.edad}</td>`));
+                fila.append($(`<td>${cliente.fecha_nacimiento}</td>`));
+                fila.append($(`<td>${cliente.genero}</td>`));
+                fila.append($(`<td>${cliente.telefono}</td>`));
+                fila.append($(`<td>${cliente.email}</td>`));
+                fila.append($(`<td>${cliente.miembro_desde}</td>`));
+                $('#clientes tbody').append(fila);
+              });
+
+              data.clases.forEach(function(clase) {
+                let fila = $('<tr>');
+                fila.append($(`<td>${clase.nombre}</td>`));
+                fila.append($(`<td>${clase.horario}</td>`));
+                fila.append($(`<td>${clase.duracion}</td>`));
+                fila.append($(`<td>${clase.entrenador}</td>`));
+                $('#clases tbody').append(fila);
+              });
+
+              data.horarios.forEach(function(horario) {
+                let fila = $('<tr>');
+                fila.append($(`<td>${horario.Lunes}</td>`));
+                fila.append($(`<td>${horario.Martes}</td>`));
+                fila.append($(`<td>${horario.Miercoles}</td>`));
+                fila.append($(`<td>${horario.Jueves}</td>`));
+                fila.append($(`<td>${horario.Viernes}</td>`));
+                fila.append($(`<td>${horario.Sabado}</td>`));
+                fila.append($(`<td>${horario.Domingo}</td>`));
+                $('#horarios tbody').append(fila);
+              });
+            }
+          });
+        });
+    </script>
+</body>
+</html>

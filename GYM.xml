@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GYMULEAM >
+  <clientes>
+    <cliente >
+      <nombre>John Doe</nombre>
+      <apellidos>Arana Perez</apellidos>
+      <edad>30</edad>
+      <cedula>2345469857</cedula>
+      <sexo>masculino</sexo>
+      <email>JhonDoe@gmail.com</email>
+      <miembro_desde>2022-01-15</miembro_desde>
+    </cliente>
+    <cliente >
+      <nombre>Anthony Smith</nombre>
+      <apellidos>Delgado Tapia</apellidos>
+      <edad>25</edad>
+      <cedula>1325469456</cedula>
+      <sexo>Masculino</sexo>
+      <email>anthony@gmail.com</email>
+      <miembro_desde>2021-09-10</miembro_desde>
+    </cliente>
+    <cliente >
+      <nombre>Juan Carlos</nombre>
+      <apellidos>Perez Hernandez</apellidos>
+      <edad>18</edad>
+      <cedula>1325469822</cedula>
+      <sexo>masculino</sexo>
+      <email>JuanPerez@gmail.com</email>
+      <miembro_desde>2022-01-20</miembro_desde>
+    </cliente>
+  </clientes>
+
+  <entrenadores>
+    <entrenador >
+      <nombre>Michael Johnson</nombre>
+      <apellidos>Hernandez Perez</apellidos>
+      <cedula>1725859857</cedula>
+      <especialidad>entrenamiento de fuerza</especialidad>
+      <email>Johnson123@gmail.com</email>
+    </entrenador>
+    <entrenador>
+      <nombre>Sarah Carla</nombre>
+      <apellidos>Suarez Cedeño</apellidos>
+      <cedula>6789809877</cedula>
+      <especialidad>entrenamiento cardiovascular</especialidad>
+      <email>sarah123@gmail.com</email>
+    </entrenador>
+    <entrenador >
+      <nombre>Franki Max</nombre>
+      <apellidos>Tuarez Pincay</apellidos>
+      <cedula>1235859687</cedula>
+      <especialidad>entrenamiento Funcional</especialidad>
+      <email>Franki23@gmail.com</email>
+    </entrenador>
+    <entrenador >
+      <nombre>Carlos Juan</nombre>
+      <apellidos>Rodriguez Menendez</apellidos>
+      <cedula>1897659457</cedula>
+      <especialidad>BOXEO</especialidad>
+      <email>Juan13@gmail.com</email>
+    </entrenador>
+  </entrenadores>
+
+  <clases>
+    <clase id="1">
+      <nombre>Yoga</nombre>
+      <horario>días martes y jueves a las 18:00</horario>
+      <duracion>60</duracion>
+      <entrenador_id>1</entrenador_id>
+    </clase>
+    <clase id="2">
+      <nombre>Zumba</nombre>
+      <horario>días lunes y miércoles a las 19:30</horario>
+      <duracion>45</duracion>
+      <entrenador_id>2</entrenador_id>
+    </clase>
+    <clase id="3">
+      <nombre>Yoga</nombre>
+      <horario>días martes y jueves a las 18:00</horario>
+      <duracion>60</duracion>
+      <entrenador_id>3</entrenador_id>
+    </clase>
+    <clase id="4">
+      <nombre>Zumba</nombre>
+      <horario>días lunes y miércoles a las 19:30</horario>
+      <duracion>45</duracion>
+      <entrenador_id>4</entrenador_id>
+    </clase>
+  </clases>
+
+<horarios>
+  <horario>
+    <Lunes>7:00 AM - 10:00 PM</Lunes>
+    <Martes>7:00 AM - 10:00 PM</Martes>
+    <Miercoles>7:00 AM - 10:00 PM</Miercoles>
+    <Jueves>7:00 AM - 10:00 PM</Jueves>
+    <Viernes>7:00 AM - 10:00 PM</Viernes>
+    <Sabado>8:00 AM - 6:00 PM</Sabado>
+    <Domingo>10:00 AM - 4:00 PM</Domingo>
+  </horario>
+</horarios>
+</GYMULEAM>

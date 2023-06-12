@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATOS XML</title>
+
+</head>
+
+<body>
+    <h1>COACH</h1>
+    <table border="1" id="entrenadores">
+      <thead>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Cédula</th>
+        <th>Especialidad</th>
+        <th>Email</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <h1>Clientes</h1>
+    <table border="1" id="clientes">
+      <thead>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>edad</th>
+        <th>sexo</th>
+        <th>Cedula</th>
+        <th>Email</th>
+        <th>miembro_desde</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+    <h1>Clases</h1>
+    <table border="1" id="clases">
+      <thead>
+        <th>Nombre</th>
+        <th>Horarios</th>
+        <th>duracion</th>
+        <th>entrenador_id</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <h1>Horarios</h1>
+    <table border="1" id="horario">
+      <thead>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Sabado</th>
+        <th>Domingo</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(() => {
+          $.ajax({
+            type: 'GET',
+            url: 'GYM.xml',
+            dataType: 'xml',
+            success: function(data) {
+              $(data).find('entrenador').each(function() {
+                let fila = $('<tr>');
+                fila.append($(`<td>${$(this).find('nombre').text()}</td>`));
+                fila.append($(`<td>${$(this).find('apellidos').text()}</td>`));
+                fila.append($(`<td>${$(this).find('cedula').text()}</td>`));
+                fila.append($(`<td>${$(this).find('especialidad').text()}</td>`));
+                fila.append($(`<td>${$(this).find('email').text()}</td>`));
+                $('#entrenadores tbody').append(fila);
+              });
+
+              $(data).find('cliente').each(function() {
+                let fila = $('<tr>');
+                fila.append($(`<td>${$(this).find('nombre').text()}</td>`));
+                fila.append($(`<td>${$(this).find('apellidos').text()}</td>`));
+                fila.append($(`<td>${$(this).find('edad').text()}</td>`));
+                fila.append($(`<td>${$(this).find('sexo').text()}</td>`));
+                fila.append($(`<td>${$(this).find('cedula').text()}</td>`));
+                fila.append($(`<td>${$(this).find('email').text()}</td>`));
+                fila.append($(`<td>${$(this).find('miembro_desde').text()}</td>`));
+                $('#clientes tbody').append(fila);
+              });
+
+              $(data).find('clase').each(function() {
+                let fila = $('<tr>');
+                fila.append($(`<td>${$(this).find('nombre').text()}</td>`));
+                fila.append($(`<td>${$(this).find('horario').text()}</td>`));
+                fila.append($(`<td>${$(this).find('duracion').text()}</td>`));
+                fila.append($(`<td>${$(this).find('entrenador_id').text()}</td>`));
+                $('#clases tbody').append(fila);
+              });
+
+              $(data).find('horario').each(function() {
+                let fila = $('<tr>');
+                fila.append($(`<td>${$(this).find('Lunes').text()}</td>`));
+                fila.append($(`<td>${$(this).find('Martes').text()}</td>`));
+                fila.append($(`<td>${$(this).find('Miercoles').text()}</td>`));
+                fila.append($(`<td>${$(this).find('Jueves').text()}</td>`));
+                fila.append($(`<td>${$(this).find('Viernes').text()}</td>`));
+                fila.append($(`<td>${$(this).find('Sabado').text()}</td>`));
+                fila.append($(`<td>${$(this).find('Domingo').text()}</td>`));
+                $('#horario tbody').append(fila);
+              });
+
+
+          $('#entrenadores').show();
+          $('#clientes').show();
+          $('#clases').show();
+          $('#horarios').show();
+        }
+      });
+    });
+            </script>
+</body>
+</html>
